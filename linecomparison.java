@@ -14,11 +14,19 @@ public class linecomparison {
 		int length=(int)Math.sqrt((Math.pow(x2-x1,2)) + (Math.pow(y2-y1,2)));
 		return length;
 	}
-	public void equal(int firstline,int secondline){
+	public void compare(int firstline,int secondline){
 		String first=Integer.toString(firstline);
 		String second=Integer.toString(secondline);
-		System.out.println("Both lines are of equal length. True or False :");
-		System.out.println(first.equals(second));
+		int com=first.compareTo(second);
+		if(com>=1)
+		{
+			System.out.println("First line length is greater than Second line");
+		}
+		else if(com<0)
+		{
+			 System.out.println("Second line length is greater than First line");
+
+		}
 	}
 
 	public static void main(String[] args){
@@ -29,6 +37,6 @@ public class linecomparison {
 		int secondline=lc.length();
 		System.out.println("Lenth of first line is: "+secondline);
 
-		lc.equal(firstline,secondline);
+		lc.compare(firstline,secondline);
 	}
 }
