@@ -14,6 +14,13 @@ public class linecomparison {
 		int length=(int)Math.sqrt((Math.pow(x2-x1,2)) + (Math.pow(y2-y1,2)));
 		return length;
 	}
+	public void equal(int firstline,int secondline){
+		String first=Integer.toString(firstline);
+		String second=Integer.toString(secondline);
+		System.out.println("Both lines are of equal length. True or False :");
+		System.out.println(first.equals(second));
+	}
+
 	public void compare(int firstline,int secondline){
 		String first=Integer.toString(firstline);
 		String second=Integer.toString(secondline);
@@ -37,6 +44,7 @@ public class linecomparison {
 		int secondline=lc.length();
 		System.out.println("Lenth of first line is: "+secondline);
 
+		lc.equal(firstline,secondline);
 		lc.compare(firstline,secondline);
 	}
 }
