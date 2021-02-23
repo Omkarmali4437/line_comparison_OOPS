@@ -14,10 +14,21 @@ public class linecomparison {
 		int length=(int)Math.sqrt((Math.pow(x2-x1,2)) + (Math.pow(y2-y1,2)));
 		return length;
 	}
+	public void equal(int firstline,int secondline){
+		String first=Integer.toString(firstline);
+		String second=Integer.toString(secondline);
+		System.out.println("Both lines are of equal length. True or False :");
+		System.out.println(first.equals(second));
+	}
+
 	public static void main(String[] args){
 		System.out.println("Welcome to Line Comparison Problem using OOPS concept");
 		linecomparison lc=new linecomparison();
-		int linelength=lc.length();
-		System.out.println("Lenth of a line is: "+linelength);
+		int firstline=lc.length();
+		System.out.println("Lenth of first line is: "+firstline);
+		int secondline=lc.length();
+		System.out.println("Lenth of first line is: "+secondline);
+
+		lc.equal(firstline,secondline);
 	}
 }
